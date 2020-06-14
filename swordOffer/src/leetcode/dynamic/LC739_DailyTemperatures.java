@@ -1,5 +1,6 @@
 package leetcode.dynamic;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -34,7 +35,7 @@ public class LC739_DailyTemperatures {
     public int[] dailyTemperatures(int[] T) {
         int len = T.length;
         int[] ans = new int[len];
-        Deque<Integer> stack = new LinkedList<>();
+        Deque<Integer> stack = new ArrayDeque<>();
         for (int i=0; i<len; i++) {
             int temperature = T[i];
             while (!stack.isEmpty() && temperature > T[stack.peek()]) {
