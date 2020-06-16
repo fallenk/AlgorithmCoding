@@ -59,7 +59,6 @@ public class LC14_LongestCommonPrefix {
 
     public String longestCommonPrefix3(String[] strs) {
         if (strs ==null || strs.length == 0) return "";
-
         int length = strs[0].length();
         int count = strs.length;
         for (int i=0; i<length; i++) {
@@ -71,7 +70,6 @@ public class LC14_LongestCommonPrefix {
             }
         }
         return strs[0];
-
     }
 
 }
